@@ -22,15 +22,6 @@ for alpha in alphas:
     print("Score: ", train_and_predict(alpha))
     print()
 
-  print('Score: ', train_and_predict(alpha))
-    print()
-Alpha:  0.0
-Traceback (most recent call last):
-  File "<stdin>", line 19, in <module>
-    print('Score: ', train_and_predict(alpha))
-  File "<stdin>", line 13, in train_and_predict
-    score = matrix.accuracy_score(y_test, pred)
-NameError: name 'matrix' is not defined
 # Create the list of alphas: alphas
 alphas = np.arange(0, 1, 0.1)
 
@@ -46,13 +37,14 @@ def train_and_predict(alpha):
     score = metrics.accuracy_score(y_test, pred)
     return score
 
-#Iterate over the alphas and print the corresponding score
+
+# Iterate over the alphas and print the corresponding score
 for alpha in alphas:
-    print('Alpha: ', alpha)
-    print('Score: ', train_and_predict(alpha))
+    print("Alpha: ", alpha)
+    print("Score: ", train_and_predict(alpha))
     print()
 
-# Output    
+# Output
 # Alpha:  0.0
 # Score:  0.8813964610234337
 
